@@ -1,0 +1,55 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ]
+            }
+        },
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:import/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "import",
+        "prettier"
+    ],
+    "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": 0,
+        "import/named": 2,
+        "import/namespace": 2,
+        "import/default": 2,
+        "import/export": 2,
+        "sort-imports": ["error", {
+            "ignoreCase": false,
+            "ignoreDeclarationSort": false,
+            "ignoreMemberSort": false,
+            "memberSyntaxSortOrder": ["all", "multiple", "single", "none"],
+            "allowSeparatedGroups": true
+        }],
+        "prettier/prettier": "error"
+    }
+}
